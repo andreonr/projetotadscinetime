@@ -1,0 +1,43 @@
+-- Criação do Banco de Dados (opcional, pode ser feito manualmente)
+CREATE DATABASE IF NOT EXISTS `cinetime_db` 
+DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+
+USE `cinetime_db`;
+
+-- Tabela: generos
+-- Armazena os diferentes gêneros de filmes e séries.
+CREATE TABLE `generos` (
+  `id_genero` INT AUTO_INCREMENT PRIMARY KEY,
+  `nome` VARCHAR(50) NOT NULL UNIQUE
+) ENGINE=InnoDB;
+
+-- Tabela: midias
+-- Tabela principal que armazena as informações dos filmes e séries.
+-- Contém uma chave estrangeira (id_genero_fk) que se conecta à tabela de gêneros.
+CREATE TABLE `midias` (
+  `id_midia` INT AUTO_INCREMENT PRIMARY KEY,
+  `titulo` VARCHAR(255) NOT NULL,
+  `sinopse` TEXT,
+  `ano_lancamento` INT(4),
+  `tipo` ENUM('Filme', 'Série') NOT NULL,
+  `nota` DECIMAL(3,1) COMMENT 'Nota pessoal de 0.0 a 10.0',
+  `status` ENUM('Assistido', 'Quero Assistir', 'Assistindo') NOT NULL,
+  `id_genero_fk` INT,
+  CONSTRAINT `fk_midia_genero`
+    FOREIGN KEY (`id_genero_fk`)
+    REFERENCES `generos` (`id_genero`)
+    ON DELETE SET NULL -- Se um gênero for deletado, o campo na mídia fica nulo.
+) ENGINE=InnoDB;
+
+-- Inserindo alguns dados iniciais para teste
+INSERT INTO `generos` (`nome`) VALUES
+('Ação'),
+('Comédia'),
+('Drama'),
+('Ficção Científica'),
+('Terror');
+
+INSERT INTO `midias` (`titulo`, `sinopse`, `ano_lancamento`, `tipo`, `nota`, `status`, `id_genero_fk`) VALUES
+('O Poderoso Chefão', 'Uma família da máfia luta para manter seu poder em Nova York.', 1972, 'Filme', 9.8, 'Assistido', 3),
+('Breaking Bad', 'Um professor de química com câncer terminal começa a produzir metanfetamina.', 2008, 'Série', 10.0, 'Assistido', 3),
+('Interestelar', 'Um grupo de exploradores viaja através de um buraco de minhoca no espaço.', 2014, 'Filme', 9.5, 'Assistido', 4);
