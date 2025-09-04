@@ -15,17 +15,17 @@ class LoginController {
 
         if ($usuario) {
             $_SESSION['usuario'] = $usuario;
-            header("Location: /dashboard.php");
+            header("Location: /public/dashboard.php");
             exit;
         } else {
-            $erro = "E-mail ou senha inválidos";
+            $erro = "E-mail ou senha inválidos!";
             require __DIR__ . "/../views/login.php";
         }
     }
 
     public function sair() {
         session_destroy();
-        header("Location: /");
+        header("Location: /public/index.php");
         exit;
     }
 }

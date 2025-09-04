@@ -7,5 +7,4 @@ if ($controller === 'login') {
     $ctrl = new LoginController();
     $ctrl->$action();
 } else {
-
 }

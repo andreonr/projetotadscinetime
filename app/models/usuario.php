@@ -16,4 +16,13 @@ class Usuario {
         }
         return false;
     }
+
+    public static function cadastrar($nome, $email, $senha) {
+        $con = Conexao::getConexao();
+        $sql = $con->prepare("INSERT INTO usuarios (nome, email, senha) VALUES (:nome, :email, :senha)");
+        $sql->bindValue(":nome", $nome);
+        $sql->bindValue(":email", $email);
+        $sql->bindValue(":senha", password_hash($senha, PASSWORD_DEFAULT));
+        return $sql->execute();
+    }
 }
