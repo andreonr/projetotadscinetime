@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <title>CineTime - Entrar</title>
-  <!-- Importando o CSS externo -->
   <link rel="stylesheet" href="/public/assets/css/login.css">
 </head>
 <body>

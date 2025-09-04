@@ -1,4 +1,3 @@
-/* Fundo geral com imagem */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -12,23 +11,23 @@ body {
   color: #fff;
 }
 
-/* Camada escura sobre a imagem */
+
 .overlay {
   position: absolute;
   top: 0; left: 0;
   width: 100%; height: 100%;
-  background: rgba(0,0,0,0.75); /* mais escuro para contraste */
+  background: rgba(0,0,0,0.75); 
   z-index: 0;
 }
 
-/* Caixa de login */
+
 .login-box {
   position: relative;
   z-index: 1;
   width: 100%;
   max-width: 400px;
-  background: #0b0b1a; /* preto com tom azulado */
-  border: 1px solid #1c2a48; /* azul escuro */
+  background: #0b0b1a; 
+  border: 1px solid #1c2a48; 
   padding: 30px;
   border-radius: 12px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.8);
@@ -38,10 +37,9 @@ body {
 .login-box h2 {
   margin-bottom: 20px;
   font-size: 26px;
-  color: #4da3ff; /* azul claro para destaque */
+  color: #4da3ff;
 }
 
-/* Formulário */
 .form-group {
   margin-bottom: 15px;
   text-align: left;
@@ -51,13 +49,13 @@ body {
   display: block;
   margin-bottom: 5px;
   font-size: 14px;
-  color: #cfd8e3; /* branco suave */
+  color: #cfd8e3;
 }
 
 .form-group input {
   width: 100%;
   padding: 12px;
-  background: #111827; /* preto mais claro */
+  background: #111827;
   border: 1px solid #1f2937;
   color: #fff;
   border-radius: 8px;
@@ -66,7 +64,7 @@ body {
 }
 
 .form-group input:focus {
-  border-color: #4da3ff; /* azul claro */
+  border-color: #4da3ff; 
   box-shadow: 0 0 6px #4da3ff66;
 }
 
@@ -74,7 +72,7 @@ body {
 .login-box button {
   width: 100%;
   padding: 12px;
-  background: #1c2a48; /* azul escuro */
+  background: #1c2a48;
   border: none;
   border-radius: 8px;
   color: #fff;
@@ -84,27 +82,26 @@ body {
 }
 
 .login-box button:hover {
-  background: #2a3f66; /* azul mais claro */
+  background: #2a3f66;
   transform: scale(1.02);
 }
 
-/* Erro */
+
 .error-box {
-  background: #b91c1c; /* vermelho escuro */
+  background: #b91c1c;
   padding: 10px;
   border-radius: 6px;
   margin-bottom: 15px;
   text-align: center;
 }
 
-/* Link cadastro */
 .login-box p {
   margin-top: 15px;
   font-size: 14px;
 }
 
 .login-box a {
-  color: #4da3ff; /* azul claro */
+  color: #4da3ff;
   text-decoration: none;
 }
 
