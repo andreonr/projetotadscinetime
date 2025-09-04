@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="/public/assets/css/login.css">
 </head>
 <body>
-  <div class="overlay"></div>
+  <div class= "overlay"></div>
 
   <div class="login-box" role="main" aria-labelledby="login-title">
     <h2 id="login-title">🎬 CineTime</h2>
