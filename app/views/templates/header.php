@@ -1,16 +1,23 @@
+<?php
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CineTime - Seu Catálogo de Filmes e Séries</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <title>Cine Time</title>
+  <link rel="stylesheet" href="/public/assets/css/login.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-            <a class="navbar-brand" href="index.php?acao=listar">CineTime</a>
-        </div>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="/public/index.php">Início</a></li>
+        <li><a href="/public/catalogo.php">Catálogo</a></li>
+        <li><a href="/public/perfil.php">Perfil</a></li>
+        <li><a href="/public/logout.php">Sair</a></li>
+      </ul>
     </nav>
-    <div class="container mt-4">
+  </header>
