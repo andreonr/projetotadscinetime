@@ -20,7 +20,7 @@ html,body{
 }
 
 body {
-  background: url('/public/assets/images/banner.jpg') no-repeat center center fixed;
+  background: url('../images/banner.jpg') no-repeat center center fixed;
   background-size: cover;
   display:flex;
   align-items:center;

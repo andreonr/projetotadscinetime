@@ -8,7 +8,8 @@ if (session_status() === PHP_SESSION_NONE) {
 <head>
   <meta charset="UTF-8">
   <title>Cine Time</title>
-  <link rel="stylesheet" href="/public/assets/css/login.css">
+  <link rel="stylesheet" href="assets/css/login.css">
+
 </head>
 <body>
   <header>
