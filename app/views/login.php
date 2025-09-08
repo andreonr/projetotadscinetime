@@ -1,4 +1,5 @@
 <?php
+?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -6,14 +7,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>CineTime - Entrar</title>
-  <link rel="stylesheet" href="assets/css/login.css">
+  <link rel="stylesheet" href="../public/assets/css/login.css">
 </head>
 
 <body>
   <div class= "overlay"></div>
 
   <div class="login-box" role="main" aria-labelledby="login-title">
-    <h2 id="login-title">🎬 CineTime</h2>
+    <h2 id="login-title">CineTime</h2>
 
     <?php if (!empty($erro)): ?>
       <div class="error-box" role="alert"><?= htmlspecialchars($erro) ?></div>

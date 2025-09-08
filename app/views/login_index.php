@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>CineTime - Entrar</title>
-  <link rel="stylesheet" href="/public/assets/css/login.css">
+  <link rel="stylesheet" href="/app/views/css/loginindex.css">
 </head>
 <body>
   <div class="overlay"></div>
@@ -13,7 +13,7 @@
 
     <?php if (!empty($erro)): ?>
       <div class="error-box">
-        <?= $erro ?>
+        <?= $erro ?>s
       </div>
     <?php endif; ?>
 
