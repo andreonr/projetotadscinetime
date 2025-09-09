@@ -1,5 +1,4 @@
 <?php
-// /app/Models/Midia.php
 require_once 'Conexao.php';
 
 class Midia {
