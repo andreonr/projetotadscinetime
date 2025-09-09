@@ -1,11 +1,9 @@
 <?php
-// /app/Models/Conexao.php
 class Conexao {
     private static $instance;
 
     public static function getConn() {
         if (!isset(self::$instance)) {
-            // credenciais do banco de dados
             $host = 'localhost';
             $dbname = 'cinetime_db';
             $user = 'root';
