@@ -3,17 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <title>CineTime - Entrar</title>
-  <link rel="stylesheet" href="/app/views/css/loginindex.css">
+  <link rel="stylesheet" href="/projetotadscinetime/public/assets/css/login.css">
 </head>
 <body>
   <div class="overlay"></div>
-  
   <div class="login-box">
-    <h2>🎬 CineTime</h2>
+
+    <h2>
+      <img src="/projetotadscinetime/public/assets/images/cinetimelogo2.png" alt="Logo CineTime" class="logo">
+    </h2>
 
     <?php if (!empty($erro)): ?>
       <div class="error-box">
-        <?= $erro ?>s
+        <?= $erro ?>
       </div>
     <?php endif; ?>
 
@@ -26,10 +28,10 @@
         <label for="senha">Senha</label>
         <input type="password" name="senha" placeholder="Sua senha" required>
       </div>
-      <button type="submit">Entrar</button>
+      <button type="submit" class="btn-login">Entrar</button>
     </form>
 
-    <p>Não tem conta? <a href="/public/index.php?controller=login&action=register">Cadastre-se</a></p>
+    <p class="small">Não tem conta? <a href="/public/index.php?controller=login&action=register">Cadastre-se</a></p>
   </div>
 </body>
 </html>

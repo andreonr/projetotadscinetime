@@ -20,7 +20,7 @@ html,body{
 }
 
 body {
-  background: url('../images/banner.jpg') no-repeat center center fixed;
+  background: url('/projetotadscinetime/public/assets/images/cine time banner.jpg') no-repeat center center fixed;
   background-size: cover;
   display:flex;
   align-items:center;
@@ -72,7 +72,7 @@ body {
 .form-group label{
   display:block;
   margin-bottom:6px;
-  font-size:13px;
+  font-size:16px;
   color:var(--muted);
 }
 .form-group input{
@@ -97,7 +97,7 @@ body {
   border-radius:10px;
   border:none;
   background:var(--accent-strong);
-  color:#eaf2ff;
+  color:#000b1c;
   font-weight:600;
   font-size:15px;
   cursor:pointer;
@@ -108,3 +108,31 @@ body {
 .small{ margin-top:14px; color:var(--muted); font-size:13px; }
 .small a{ color:var(--accent); text-decoration:none; }
 .small a:hover{ text-decoration:underline; color:#93c5fd; }
+
+
+.logo {
+  max-width: 280px;
+  height: auto;
+  margin-bottom: 1px 1px;
+}
+
+
+.btn-login {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background: var(--accent-strong); 
+  color: #ffffff; 
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  margin-top: 6px;
+  transition: all 0.2s ease;
+}
+
+.btn-login:hover {
+  background: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(96,165,250,0.3);
+}
