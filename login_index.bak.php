@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="pt-br">
 <head>
@@ -9,7 +10,7 @@
   <div class="overlay"></div>
   
   <div class="login-box">
-    <h2>🎬 CineTime</h2>
+    <h2>CineTime</h2>
 
     <?php if (!empty($erro)): ?>
       <div class="error-box">

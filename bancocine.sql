@@ -41,3 +41,16 @@ INSERT INTO `midias` (`titulo`, `sinopse`, `ano_lancamento`, `tipo`, `nota`, `st
 ('O Poderoso Chefão', 'Uma família da máfia luta para manter seu poder em Nova York.', 1972, 'Filme', 9.8, 'Assistido', 3),
 ('Breaking Bad', 'Um professor de química com câncer terminal começa a produzir metanfetamina.', 2008, 'Série', 10.0, 'Assistido', 3),
 ('Interestelar', 'Um grupo de exploradores viaja através de um buraco de minhoca no espaço.', 2014, 'Filme', 9.5, 'Assistido', 4);
+
+CREATE TABLE IF NOT EXISTS usuarios (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    telefone VARCHAR(20) NOT NULL,
+    cpf VARCHAR(14) NOT NULL UNIQUE,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    senha VARCHAR(255) NOT NULL,
+    criado_em TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+--exemplo para inserir os usuarios
+INSERT INTO usuarios (nome, telefone, cpf, email, senha) VALUES
+('João da Silva', '(11) 98888-7777', '123.456.789-00', 'joao@email.com', 'senha123');
