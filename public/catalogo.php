@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (!isset($_SESSION['usuario'])) {
-    header("Location: ../app/views/login.php");
+    header("Location: /projetotadscinetime/public/index.php");
     exit;
 }
 require_once("../app/models/conexao.php");

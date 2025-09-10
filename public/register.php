@@ -30,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 $usuario->criarUsuario($nome . " " . $sobrenome, $email, $hash, $cpf);
 
                 // redireciona direto para login com mensagem de sucesso
-                header("Location: ../index.php?cadastro=sucesso");
+                header("Location: /projetotadscinetime/public/index.php?cadastro=sucesso");
                 exit;
             }
         } catch (Exception $e) {
@@ -47,7 +47,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 <head>
     <meta charset="UTF-8">
     <title>Cadastro - CineTime</title>
-    <link rel="stylesheet" href="/projetotadscinetime/public/assets/css/login.css">
+    <link rel="stylesheet" href="/projetotadscinetime/public/assets/css/register.css">
 </head>
 <body>
     <div class="overlay"></div>
@@ -64,7 +64,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
         <?php if ($sucesso): ?>
             <div class="success-box"><?= $sucesso ?></div>
-            <a href="../index.php">Ir para Login</a>
+            <a href="/projetotadscinetime/public/index.php">Ir para Login</a>
         <?php endif; ?>
 
         <form method="POST" action="">
@@ -93,10 +93,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 <input type="password" name="senha" placeholder="Sua senha" required>
             </div>
 
-            <button type="submit" class="btn-login">Cadastrar</button>
+            <button type="submit" class="btn-login" href="/projetotadscinetime/public/index.php">Cadastrar</button>
         </form>
 
-        <p class="small">Já tem conta? <a href="../index.php">Faça login aqui</a></p>
+        <p class="small">Já tem conta? <a href="/projetotadscinetime/public/index.php">Faça login aqui</a></p>
     </div>
 </body>
 </html>

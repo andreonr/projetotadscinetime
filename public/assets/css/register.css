@@ -1,78 +1,138 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
+:root{
+  --bg-dark: #0b0f1a;
+  --panel: rgba(10,15,30,0.85);
+  --accent: #60a5fa;
+  --accent-strong: #1e3a8a;
+  --muted: #9fb8d8;
+}
+
+*{box-sizing:border-box}
+
+html,body{
+  height:100%;
+  margin:0;
+  font-family:'Poppins',sans-serif;
+  color:var(--muted);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
 body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
-    height: 100vh;
-    background: url('../img/banner-login.jpg') no-repeat center center fixed;
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  background: url('/projetotadscinetime/public/assets/images/cine time banner.jpg') no-repeat center center fixed;
+  background-size: cover;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  min-height:100vh;
+  position:relative;
 }
 
-.register-container {
-    background: rgba(10, 15, 30, 0.85);
-    padding: 40px;
-    border-radius: 12px;
-    width: 350px;
-    text-align: center;
-    color: #fff;
-    box-shadow: 0px 0px 15px rgba(0,0,0,0.5);
+.overlay{
+  position:fixed;
+  inset:0;
+  background:linear-gradient(180deg, rgba(2,6,23,0.6), rgba(2,6,23,0.7));
+  z-index:0;
 }
 
-.register-container h1 {
-    margin-bottom: 20px;
-    font-weight: 600;
-    font-size: 26px;
+.login-box{
+  position:relative;
+  z-index:2;
+  width:100%;
+  max-width:420px;
+  background: var(--panel);
+  border-radius:14px;
+  padding:36px;
+  box-shadow: 0 10px 40px rgba(2,6,23,0.7);
+  border:1px solid rgba(96,165,250,0.06);
+  text-align:center;
 }
 
-.register-container input {
-    width: 100%;
-    padding: 12px;
-    margin: 8px 0;
-    border: none;
-    border-radius: 8px;
-    outline: none;
-    font-size: 14px;
+.login-box h2{
+  margin:0 0 18px 0;
+  color:var(--accent);
+  font-weight:600;
+  font-size:20px;
 }
 
-.register-container button {
-    width: 100%;
-    padding: 12px;
-    margin-top: 12px;
-    background-color: #1e90ff;
-    border: none;
-    border-radius: 8px;
-    font-size: 16px;
-    font-weight: bold;
-    color: white;
-    cursor: pointer;
-    transition: background 0.3s;
+.error-box{
+  background:#5b2121;
+  color:#ffd6d6;
+  padding:10px;
+  border-radius:8px;
+  margin-bottom:12px;
+  text-align:center;
 }
 
-.register-container button:hover {
-    background-color: #1c7ed6;
+.form-group{
+  text-align:left;
+  margin-bottom:14px;
+}
+.form-group label{
+  display:block;
+  margin-bottom:6px;
+  font-size:14px;
+  color:var(--muted);
+}
+.form-group input{
+  width:100%;
+  padding:12px 14px;
+  border-radius:10px;
+  border:1px solid rgba(31,41,55,0.6);
+  background:#0f1724;
+  color:#e6f0ff;
+  font-size:14px;
+  outline:none;
+  transition:box-shadow .18s, border-color .18s;
+}
+.form-group input:focus{
+  border-color:var(--accent);
+  box-shadow:0 0 0 4px rgba(96,165,250,0.08);
 }
 
-.register-container p {
-    margin-top: 15px;
-    font-size: 14px;
+.btn-login{
+  width:100%;
+  padding:12px;
+  border-radius:10px;
+  border:none;
+  background:var(--accent-strong);
+  color:#000b1c;
+  font-weight:600;
+  font-size:12px;
+  cursor:pointer;
+  margin-top:6px;
+}
+.btn-login:hover{ background:#2563eb; transform:translateY(-1px); transition:all .15s; }
+
+.small{ margin-top:14px; color:var(--muted); font-size:13px; }
+.small a{ color:var(--accent); text-decoration:none; }
+.small a:hover{ text-decoration:underline; color:#93c5fd; }
+
+
+.logo {
+  max-width: 280px;
+  height: auto;
+  margin-bottom: 1px 1px;
 }
 
-.register-container a {
-    color: #1e90ff;
-    text-decoration: none;
-    font-weight: 500;
+
+.btn-login {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background: var(--accent-strong); 
+  color: #ffffff; 
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  margin-top: 6px;
+  transition: all 0.2s ease;
 }
 
-.register-container a:hover {
-    text-decoration: underline;
-}
-
-.erro {
-    color: red;
-    font-size: 14px;
-    margin-bottom: 10px;
+.btn-login:hover {
+  background: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(96,165,250,0.3);
 }

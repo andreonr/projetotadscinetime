@@ -7,7 +7,7 @@ if (isset($_GET['cadastro']) && $_GET['cadastro'] === "sucesso") {
     $mensagem = "Cadastro realizado com sucesso! Faça login para continuar.";
 }
 
-  // erro vindo do controller
+// erro vindo do controller
 $erro = isset($_GET['erro']) ? "E-mail ou senha inválidos!" : "";
 ?>
 <!doctype html>
@@ -37,7 +37,8 @@ $erro = isset($_GET['erro']) ? "E-mail ou senha inválidos!" : "";
       </div>
     <?php endif; ?>
 
-    <form method="post" action="/public/index.php?controller=login&action=autenticar">
+    <!-- Formulário de login -->
+    <form method="post" action="/projetotadscinetime/public/index.php?controller=login&action=autenticar">
       <div class="form-group">
         <label for="email">E-mail</label>
         <input type="email" name="email" placeholder="seuemail@exemplo.com" required>
@@ -49,7 +50,7 @@ $erro = isset($_GET['erro']) ? "E-mail ou senha inválidos!" : "";
       <button type="submit" class="btn-login">Entrar</button>
     </form>
 
-    <p class="small">Não tem conta? <a href="/public/index.php?controller=login&action=register">Cadastre-se</a></p>
+    <p class="small">Não tem conta? <a href="/projetotadscinetime/public/register.php">Cadastre-se</a></p>
   </div>
 </body>
 </html>
