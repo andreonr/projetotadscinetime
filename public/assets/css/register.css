@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    background: url('../img/banner-login.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.register-container {
+    background: rgba(10, 15, 30, 0.85);
+    padding: 40px;
+    border-radius: 12px;
+    width: 350px;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.5);
+}
+
+.register-container h1 {
+    margin-bottom: 20px;
+    font-weight: 600;
+    font-size: 26px;
+}
+
+.register-container input {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    font-size: 14px;
+}
+
+.register-container button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 12px;
+    background-color: #1e90ff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.register-container button:hover {
+    background-color: #1c7ed6;
+}
+
+.register-container p {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.register-container a {
+    color: #1e90ff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.register-container a:hover {
+    text-decoration: underline;
+}
+
+.erro {
+    color: red;
+    font-size: 14px;
+    margin-bottom: 10px;
+}

@@ -1,3 +1,15 @@
+<?php
+session_start();
+
+// mensagem de sucesso após cadastro
+$mensagem = "";
+if (isset($_GET['cadastro']) && $_GET['cadastro'] === "sucesso") {
+    $mensagem = "Cadastro realizado com sucesso! Faça login para continuar.";
+}
+
+  // erro vindo do controller
+$erro = isset($_GET['erro']) ? "E-mail ou senha inválidos!" : "";
+?>
 <!doctype html>
 <html lang="pt-br">
 <head>
@@ -12,6 +24,12 @@
     <h2>
       <img src="/projetotadscinetime/public/assets/images/cinetimelogo2.png" alt="Logo CineTime" class="logo">
     </h2>
+
+    <?php if (!empty($mensagem)): ?>
+      <div class="success-box">
+        <?= $mensagem ?>
+      </div>
+    <?php endif; ?>
 
     <?php if (!empty($erro)): ?>
       <div class="error-box">

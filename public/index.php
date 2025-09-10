@@ -1,10 +1,15 @@
 <?php
-$controller = $_GET['controller'] ?? 'midia';
-$action = $_GET['action'] ?? 'index';
+session_start();
 
-if ($controller === 'login') {
-    require_once __DIR__ . '/../app/controllers/logincontroller.php';
-    $ctrl = new LoginController();
-    $ctrl->$action();
-} else {
+$pagina = basename($_SERVER['PHP_SELF']);
+$controller = $_GET['controller'] ?? null;
+$action = $_GET['action'] ?? null;
+
+if (!isset($_SESSION['usuario_id']) 
+    && $pagina !== 'login_index.php' 
+    && !($controller === 'login')) {
+    header("Location: login_index.php");
+    exit;
 }
+
+
