@@ -1,13 +1,13 @@
 <?php
 session_start();
 
-// mensagem de sucesso após cadastro
+
 $mensagem = "";
 if (isset($_GET['cadastro']) && $_GET['cadastro'] === "sucesso") {
     $mensagem = "Cadastro realizado com sucesso! Faça login para continuar.";
 }
 
-// erro vindo do controller
+
 $erro = isset($_GET['erro']) ? "E-mail ou senha inválidos!" : "";
 ?>
 <!doctype html>
@@ -37,8 +37,7 @@ $erro = isset($_GET['erro']) ? "E-mail ou senha inválidos!" : "";
       </div>
     <?php endif; ?>
 
-    <!-- Formulário de login -->
-    <form method="post" action="/projetotadscinetime/public/index.php?controller=login&action=autenticar">
+    <form method="post" action="/public/index.php?controller=login&action=autenticar">
       <div class="form-group">
         <label for="email">E-mail</label>
         <input type="email" name="email" placeholder="seuemail@exemplo.com" required>

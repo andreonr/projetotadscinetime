@@ -17,11 +17,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         try {
             $usuario = new Usuario();
 
-            // verificar se já existe email
+            // verificar se ja existe email
             if ($usuario->buscarPorEmail($email)) {
                 $erro = "Este e-mail já está cadastrado.";
             } 
-            // validar CPF (formato 000.000.000-00 ou apenas números)
+            // validar o cpf
             elseif (!preg_match('/^\d{3}\.?\d{3}\.?\d{3}-?\d{2}$/', $cpf)) {
                 $erro = "CPF inválido! Use o formato 000.000.000-00.";
             } 
@@ -29,7 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 $hash = password_hash($senha, PASSWORD_DEFAULT);
                 $usuario->criarUsuario($nome . " " . $sobrenome, $email, $hash, $cpf);
 
-                // redireciona direto para login com mensagem de sucesso
+                //vai direto para a pagina de login
                 header("Location: /projetotadscinetime/public/index.php?cadastro=sucesso");
                 exit;
             }
