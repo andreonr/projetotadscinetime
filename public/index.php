@@ -13,7 +13,6 @@ if (!isset($_SESSION['usuario_id'])
     exit;
 }
 
-// --- 🚀 Roteador simples ---
 if ($controller && $action) {
     $controllerName = ucfirst($controller) . "Controller";
     $controllerFile = __DIR__ . "../../controllers/logincontroller.php" . $controllerName . ".php";
@@ -44,5 +43,4 @@ if ($controller && $action) {
     }
 }
 
-// Se não tiver controller/action, carrega página padrão
 require __DIR__ . "/../views/home.php";

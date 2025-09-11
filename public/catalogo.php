@@ -1,6 +1,6 @@
 <?php
 session_start();
-if (!isset($_SESSION['usuario'])) {
+if (!isset($_SESSION['usuarios'])) {
     header("Location: /projetotadscinetime/public/index.php");
     exit;
 }
