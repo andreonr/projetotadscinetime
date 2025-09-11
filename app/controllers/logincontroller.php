@@ -1,31 +1,26 @@
 <?php
-session_start();
-require_once __DIR__ . "/../models/usuario.php";
+require_once __DIR__ . '/../models/Usuario.php';
 
 class LoginController {
     public function index() {
-        require __DIR__ . "/../views/login.php";
+        require __DIR__ . '/../views/login.php';
     }
 
     public function autenticar() {
         $email = $_POST['email'] ?? '';
         $senha = $_POST['senha'] ?? '';
 
-        $usuario = Usuario::autenticar($email, $senha);
+        $usuarioModel = new Usuarios();
+        $usuario = $usuarioModel->autenticar($email, $senha);
 
         if ($usuario) {
-            $_SESSION['usuario'] = $usuario;
-            header("Location: /public/dashboard.php");
+            $_SESSION['usuario_id'] = $usuario['id'];
+            $_SESSION['usuario_nome'] = $usuario['nome'];
+            header("Location: ../../public/dashboard.php");
             exit;
         } else {
             $erro = "E-mail ou senha inválidos!";
-            require __DIR__ . "/../views/login.php";
+            require __DIR__ . '/../views/login.php';
         }
-    }
-
-    public function sair() {
-        session_destroy();
-        header("Location: /public/index.php");
-        exit;
     }
 }

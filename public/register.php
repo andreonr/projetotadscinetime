@@ -15,7 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     if (!empty($nome) && !empty($sobrenome) && !empty($email) && !empty($cpf) && !empty($senha)) {
         try {
-            $usuario = new Usuario();
+            $usuario = new Usuarios();
 
             // verificar se ja existe email
             if ($usuario->buscarPorEmail($email)) {
@@ -27,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             } 
             else {
                 $hash = password_hash($senha, PASSWORD_DEFAULT);
-                $usuario->criarUsuario($nome . " " . $sobrenome, $email, $hash, $cpf);
+                $usuario->criar($nome . " " . $sobrenome, $email, $hash, $cpf);
 
                 //vai direto para a pagina de login
                 header("Location: /projetotadscinetime/public/index.php?cadastro=sucesso");
