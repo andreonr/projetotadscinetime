@@ -1,10 +1,10 @@
 <?php
 session_start();
-if (!isset($_SESSION['usuario'])) {
+if (!isset($_SESSION['usuarios'])) {
     header("Location: /public/index.php?controller=login&action=index");
     exit;
 }
-$usuario = $_SESSION['usuario'];
+$usuarios = $_SESSION['usuarios'];
 ?>
 <!doctype html>
 <html lang="pt-br">
