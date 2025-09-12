@@ -1,5 +1,4 @@
 <?php
-
 $filmesDestaques = [
   [ "img" => "/projetotadscinetime/public/assets/images/filme1.webp",  "titulo" => "DEXTER", "desc" => "Um serial killer que caça criminosos em Miami." ],
   [ "img" => "/projetotadscinetime/public/assets/images/filme2.jpg",   "titulo" => "CARROS", "desc" => "Relâmpago McQueen em uma jornada de amizade." ],
@@ -50,6 +49,7 @@ $filmesPopulares = [
   [ "img" => "/projetotadscinetime/public/assets/images/filme2.jpg",   "titulo" => "CARROS", "desc" => "Relâmpago McQueen em uma jornada." ],
   [ "img" => "/projetotadscinetime/public/assets/images/filme7.jpeg",  "titulo" => "SEM VOLTA PARA CASA", "desc" => "Peter enfrenta vilões do multiverso." ],
   [ "img" => "/projetotadscinetime/public/assets/images/filme11.jpg",  "titulo" => "STRANGER THINGS", "desc" => "Aventura sobrenatural em Hawkins." ],
+
 ];
 
 $filmesMelhorAvaliados = [
@@ -73,92 +73,6 @@ $filmesMelhorAvaliados = [
   [ "img" => "/projetotadscinetime/public/assets/images/filme2.jpg",   "titulo" => "CARROS", "desc" => "Relâmpago McQueen em uma jornada." ],
   [ "img" => "/projetotadscinetime/public/assets/images/filme7.jpeg",  "titulo" => "SEM VOLTA PARA CASA", "desc" => "Peter enfrenta vilões do multiverso." ],
   [ "img" => "/projetotadscinetime/public/assets/images/filme11.jpg",  "titulo" => "STRANGER THINGS", "desc" => "Aventura sobrenatural em Hawkins." ],
+
 ];
 ?>
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CineTime - Catálogo de Filmes</title>
-  <link rel="stylesheet" href="/projetotadscinetime/public/assets/css/catalogo.css">
-</head>
-<body>
-
-  <header>
-    <div class="logo">
-      <img src="/projetotadscinetime/public/assets/images/cinetimelogo2.png" alt="Logo CineTime">
-    </div>
-    <nav>
-      <a href="index.php">Início</a>
-      <a href="catalogo.php">Catálogo</a>
-      <a href="perfil.php">Perfil</a>
-      <a href="logout.php">Sair</a>
-    </nav>
-  </header>
-
-  <section class="hero">
-    <h2>Bem-vindo ao CineTime</h2>
-    <p>Assista a filmes e séries de sucesso em um só lugar. Experimente a emoção do cinema onde você estiver.</p>
-    <a href="#catalogo" class="btn-hero">Explorar Agora</a>
-  </section>
-
-  <main id="catalogo">
-    <div class="catalogo-section">
-      <h3>Destaques</h3>
-      <button class="seta esquerda" onclick="scrollCarrossel(this, -1)">&#10094;</button>
-      <div class="carrossel">
-        <?php foreach ($filmesDestaques as $f): ?>
-          <div class="filme-card"><img src="<?= $f['img'] ?>"><div class="filme-info"><h4><?= $f['titulo'] ?></h4><p><?= $f['desc'] ?></p><a href="#" class="btn-assistir">Assistir Agora</a></div></div>
-        <?php endforeach; ?>
-      </div>
-      <button class="seta direita" onclick="scrollCarrossel(this, 1)">&#10095;</button>
-    </div>
-
-    <div class="catalogo-section">
-      <h3>Populares</h3>
-      <button class="seta esquerda" onclick="scrollCarrossel(this, -1)">&#10094;</button>
-      <div class="carrossel">
-        <?php foreach ($filmesPopulares as $f): ?>
-          <div class="filme-card"><img src="<?= $f['img'] ?>"><div class="filme-info"><h4><?= $f['titulo'] ?></h4><p><?= $f['desc'] ?></p><a href="#" class="btn-assistir">Assistir Agora</a></div></div>
-        <?php endforeach; ?>
-      </div>
-      <button class="seta direita" onclick="scrollCarrossel(this, 1)">&#10095;</button>
-    </div>
-
-
-    <div class="catalogo-section">
-      <h3>Melhor avaliado</h3>
-      <button class="seta esquerda" onclick="scrollCarrossel(this, -1)">&#10094;</button>
-      <div class="carrossel">
-        <?php foreach ($filmesMelhorAvaliados as $f): ?>
-          <div class="filme-card"><img src="<?= $f['img'] ?>"><div class="filme-info"><h4><?= $f['titulo'] ?></h4><p><?= $f['desc'] ?></p><a href="#" class="btn-assistir">Assistir Agora</a></div></div>
-        <?php endforeach; ?>
-      </div>
-      <button class="seta direita" onclick="scrollCarrossel(this, 1)">&#10095;</button>
-    </div>
-  </main>
-
-  <footer>
-    <p>© <?= date("Y") ?> CineTime - Todos os direitos reservados</p>
-  </footer>
-
-  <script>
-    function scrollCarrossel(btn, direction) {
-      const section = btn.parentElement;
-      const carrossel = section.querySelector('.carrossel');
-      const scrollAmount = 300;
-      carrossel.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
-    }
-
-    document.querySelectorAll('.carrossel').forEach(carrossel => {
-      setInterval(() => {
-        carrossel.scrollBy({ left: 200, behavior: 'smooth' });
-        if (carrossel.scrollLeft + carrossel.clientWidth >= carrossel.scrollWidth) {
-          carrossel.scrollTo({ left: 0, behavior: 'smooth' });
-        }
-      }, 5000);
-    });
-  </script>
-</body>
-</html>
