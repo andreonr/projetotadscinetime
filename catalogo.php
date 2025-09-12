@@ -82,20 +82,30 @@ $filmesMelhorAvaliados = [
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CineTime - Catálogo de Filmes</title>
   <link rel="stylesheet" href="/projetotadscinetime/public/assets/css/catalogo.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
   <header>
-    <div class="logo">
-      <img src="/projetotadscinetime/public/assets/images/cinetimelogo2.png" alt="Logo CineTime">
-    </div>
-    <nav>
-      <a href="index.php">Início</a>
-      <a href="catalogo.php">Catálogo</a>
-      <a href="perfil.php">Perfil</a>
-      <a href="logout.php">Sair</a>
-    </nav>
-  </header>
+  <div class="logo">
+    <img src="/projetotadscinetime/public/assets/images/cinetimelogo2.png" alt="Logo CineTime">
+  </div>
+  <nav>
+    <a href="index.php" title="Início">
+      <i class="fa-solid fa-house"></i>
+    </a>
+    <a href="catalogo.php" title="Catálogo">
+      <i class="fa-solid fa-film"></i>
+    </a>
+    <a href="perfil.php" title="Perfil">
+      <i class="fa-solid fa-user"></i>
+    </a>
+    <a href="logout.php" title="Sair">
+      <i class="fa-solid fa-right-from-bracket"></i>
+    </a>
+  </nav>
+</header>
+
 
   <section class="hero">
     <h2>Bem-vindo ao CineTime</h2>
