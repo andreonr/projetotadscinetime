@@ -1,0 +1,769 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('cinetime/public/images/cine_time_banner.png') no-repeat center center;
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: linear-gradient(135deg, #040404 0%, #1a1a2e 50%, #16213e 100%);
+    color: #ffffff;
+    min-height: 100vh;
+    line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+    background: rgba(15, 15, 35, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 1rem 0;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #e50914;
+}
+
+.nav-brand i {
+    font-size: 2rem;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-link {
+    color: #ffffff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    background: rgba(229, 9, 20, 0.1);
+    color: #e50914;
+}
+
+.nav-user {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #cccccc;
+}
+
+.nav-user i {
+    font-size: 1.5rem;
+}
+
+/* Main content */
+.main-content {
+    margin-top: 80px;
+    min-height: calc(100vh - 80px);
+    padding: 2rem 0;
+}
+
+/* Login Page */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 80px);
+    padding: 2rem;
+}
+
+.login-box {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 3rem;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.login-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.logo i {
+    font-size: 3rem;
+    color: #e50914;
+}
+
+.logo h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #e50914;
+}
+
+.login-header p {
+    color: #cccccc;
+    font-size: 1.1rem;
+}
+
+/* Alerts */
+.alert {
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.alert-error {
+    background: rgba(220, 53, 69, 0.1);
+    border: 1px solid rgba(220, 53, 69, 0.3);
+    color: #ff6b6b;
+}
+
+.alert-success {
+    background: rgba(40, 167, 69, 0.1);
+    border: 1px solid rgba(40, 167, 69, 0.3);
+    color: #51cf66;
+}
+
+/* Forms */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+.form-group input {
+    padding: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.05);
+    color: #ffffff;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #e50914;
+    box-shadow: 0 0 0 2px rgba(229, 9, 20, 0.2);
+}
+
+.form-group input::placeholder {
+    color: #888888;
+}
+
+/* Buttons */
+.btn {
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #e50914 0%, #b20710 100%);
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #b20710 0%, #8a0508 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(229, 9, 20, 0.3);
+}
+
+.btn-filter {
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.btn-filter:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.btn-back {
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.btn-back:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.btn-play {
+    background: rgba(229, 9, 20, 0.9);
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+}
+
+.btn-play:hover {
+    background: #e50914;
+}
+
+/* Catalog */
+.catalog-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.catalog-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.catalog-header h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, #e50914 0%, #ff6b6b 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.catalog-header p {
+    font-size: 1.2rem;
+    color: #cccccc;
+}
+
+/* Filters */
+.filters-section {
+    margin-bottom: 3rem;
+}
+
+.filters-form {
+    display: flex;
+    justify-content: center;
+}
+
+.search-group {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.search-input {
+    position: relative;
+    min-width: 300px;
+}
+
+.search-input i {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888888;
+}
+
+.search-input input {
+    width: 100%;
+    padding: 1rem 1rem 1rem 3rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.05);
+    color: #ffffff;
+    font-size: 1rem;
+}
+
+.genre-select {
+    padding: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.05);
+    color: #ffffff;
+    font-size: 1rem;
+    min-width: 200px;
+}
+
+.genre-select option {
+    background: #1a1a2e;
+    color: #ffffff;
+}
+
+/* Movies Grid */
+.movies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.movie-card {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.movie-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+.movie-poster {
+    position: relative;
+    aspect-ratio: 2/3;
+    overflow: hidden;
+}
+
+.movie-poster img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.3s ease;
+}
+
+.movie-card:hover .movie-poster img {
+    transform: scale(1.1);
+}
+
+.no-poster {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #2c2c54 0%, #40407a 100%);
+    color: #cccccc;
+}
+
+.no-poster i {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.movie-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
+    padding: 2rem 1rem 1rem;
+    transform: translateY(100%);
+    transition: all 0.3s ease;
+}
+
+.movie-card:hover .movie-overlay {
+    transform: translateY(0);
+}
+
+.movie-info h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #ffffff;
+}
+
+.movie-year,
+.movie-genre {
+    font-size: 0.9rem;
+    color: #cccccc;
+    margin-bottom: 0.25rem;
+}
+
+.movie-actions {
+    margin-top: 1rem;
+}
+
+/* No movies */
+.no-movies {
+    text-align: center;
+    padding: 4rem 2rem;
+    color: #cccccc;
+}
+
+.no-movies i {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    color: #666666;
+}
+
+.no-movies h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Movie Details */
+.movie-details-container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.movie-hero {
+    position: relative;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.movie-backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -2;
+}
+
+.backdrop-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(5px);
+    transform: scale(1.1);
+}
+
+.backdrop-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        135deg,
+        rgba(15, 15, 35, 0.9) 0%,
+        rgba(26, 26, 46, 0.8) 50%,
+        rgba(22, 33, 62, 0.9) 100%
+    );
+    z-index: -1;
+}
+
+.movie-hero-content {
+    display: flex;
+    gap: 3rem;
+    padding: 2rem;
+    width: 100%;
+    align-items: flex-start;
+}
+
+.movie-poster-large {
+    flex-shrink: 0;
+    width: 300px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+.movie-poster-large img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.no-poster-large {
+    aspect-ratio: 2/3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #2c2c54 0%, #40407a 100%);
+    color: #cccccc;
+}
+
+.no-poster-large i {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.movie-info-large {
+    flex: 1;
+    padding-left: 2rem;
+}
+
+.movie-info-large h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.movie-meta {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.movie-year,
+.movie-genre {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.1rem;
+    color: #cccccc;
+}
+
+.movie-synopsis {
+    margin-bottom: 2rem;
+}
+
+.movie-synopsis h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #e50914;
+}
+
+.movie-synopsis p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #dddddd;
+}
+
+.movie-actions-large {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+/* Footer */
+.footer {
+    background: rgba(15, 15, 35, 0.95);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 2rem 0;
+    margin-top: 4rem;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    color: #cccccc;
+    padding: 0 2rem;
+}
+
+.footer-content p {
+    margin-bottom: 0.5rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .nav-container {
+        padding: 0 1rem;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+    
+    .nav-menu {
+        gap: 1rem;
+    }
+    
+    .catalog-container {
+        padding: 0 1rem;
+    }
+    
+    .catalog-header h1 {
+        font-size: 2rem;
+    }
+    
+    .search-group {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .search-input {
+        min-width: auto;
+        width: 100%;
+    }
+    
+    .genre-select {
+        min-width: auto;
+        width: 100%;
+    }
+    
+    .movies-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 1rem;
+    }
+    
+    .movie-hero-content {
+        flex-direction: column;
+        text-align: center;
+        padding: 1rem;
+    }
+    
+    .movie-poster-large {
+        width: 250px;
+        margin: 0 auto;
+    }
+    
+    .movie-info-large {
+        padding-left: 0;
+        padding-top: 2rem;
+    }
+    
+    .movie-info-large h1 {
+        font-size: 2rem;
+    }
+    
+    .movie-meta {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .login-box {
+        padding: 2rem;
+        margin: 1rem;
+    }
+    
+    .logo h1 {
+        font-size: 2rem;
+    }
+    
+    .movies-grid {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
+    
+    .movie-poster-large {
+        width: 200px;
+    }
+}
+
+
+/* Logo styles */
+.logo-img {
+    height: 40px;
+    width: auto;
+    margin-right: 10px;
+    filter: brightness(1.2);
+}
+
+.login-header .logo-img {
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+/* Banner styles */
+.banner {
+    background: url('/images/cine_time_banner.png') no-repeat center center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-top: 80px;
+}
+
+.banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.banner-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: white;
+}
+
+.banner-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.banner-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+/* Update login form logo styles */
+.login-header .logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.login-header .logo h1 {
+    margin-top: 0.5rem;
+}
+
+/* Register link in login footer */
+.login-footer a {
+    color: #e50914;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.login-footer a:hover {
+    text-decoration: underline;
+}
