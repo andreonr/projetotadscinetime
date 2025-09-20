@@ -175,25 +175,12 @@ php -S localhost:8080
 - Sanitização de dados de entrada
 - Controle de sessão para autenticação
 
-## Demonstração
-
-O sistema está disponível para demonstração em:
-**URL**: [https://8080-irn4pbd7mqayu5x5qgshi-915a4461.manusvm.computer/](https://8080-irn4pbd7mqayu5x5qgshi-915a4461.manusvm.computer/)
-
 **Credenciais de teste**:
 - Usuário: admin
 - Senha: password
 
-## Integrantes da Equipe
 
-- **[Seu Nome]** - Desenvolvimento Full-Stack
-- **[Nome do Parceiro]** - [Função/Responsabilidade]
 
 ## Licença
 
-Este projeto foi desenvolvido para fins acadêmicos e educacionais.
-
-## Contato
-
-Para dúvidas ou sugestões sobre o projeto, entre em contato através do repositório GitHub.
-
+Este projeto foi desenvolvido para fins acadêmicos
