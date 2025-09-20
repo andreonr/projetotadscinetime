@@ -82,7 +82,7 @@ cinetime/
 
 1. **Clone ou baixe o projeto**
    ```bash
-   git clone [URL_DO_REPOSITORIO]
+   git clone https://github.com/andreonr/projetotadscinetime
    cd cinetime
    ```
 
